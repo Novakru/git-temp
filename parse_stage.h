@@ -26,4 +26,9 @@ class ParseStage
 {
 public:
   RC handle_request(SQLStageEvent *sql_event);
+  ParsedSqlResult *get_parsed_sql_result() const;
+  void set_parsed_sql_result(ParsedSqlResult *parsed_sql_result);
+
+private:
+  ParsedSqlResult *parsed_sql_result_;
 };
