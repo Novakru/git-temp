@@ -43,16 +43,16 @@ RC ResolveStage::handle_request(SQLStageEvent *sql_event)
     return rc;
   }
 
-  ParsedSqlNode *sql_node = sql_event->sql_node().get();
-  Stmt *stmt = nullptr;
-  rc = Stmt::create_stmt(db, *sql_node, stmt);
-  if (rc != RC::SUCCESS && rc != RC::UNIMPLENMENT) {
-    LOG_WARN("failed to create stmt. rc=%d:%s", rc, strrc(rc));
-    sql_result->set_return_code(rc);
-    return rc;
-  }
+//   ParsedSqlNode *sql_node = sql_event->sql_node().get();
+//   Stmt *stmt = nullptr;
+//   rc = Stmt::create_stmt(db, *sql_node, stmt);
+//   if (rc != RC::SUCCESS && rc != RC::UNIMPLENMENT) {
+//     LOG_WARN("failed to create stmt. rc=%d:%s", rc, strrc(rc));
+//     sql_result->set_return_code(rc);
+//     return rc;
+//   }
 
-  sql_event->set_stmt(stmt);
+//   sql_event->set_stmt(stmt);
 
   return rc;
 }

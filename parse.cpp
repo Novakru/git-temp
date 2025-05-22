@@ -21,10 +21,10 @@ RC parse(char *st, ParsedSqlNode *sqln);
 
 CalcSqlNode::~CalcSqlNode()
 {
-  for (Expression *expr : expressions) {
-    delete expr;
-  }
-  expressions.clear();
+//   for (Expression *expr : expressions) {
+//     delete expr;
+//   }
+//   expressions.clear();
 }
 
 ParsedSqlNode::ParsedSqlNode() : flag(SCF_ERROR)
