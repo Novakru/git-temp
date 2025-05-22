@@ -109,6 +109,17 @@ private:
     bool bool_value_;
   } num_value_;
   std::string str_value_;
+  char *data_;
+  int flag_;
+  int length_;
+  int length_ = 0;
+  int length_ = 0;
+  int length_ = 0;
+  int length_ = 0;
+  int length_ = 0;
+  int length_ = 0;
+  int length_ = 0;
+  int length_ = 0;
 };
 
 int chars_to_timestamp(const char *str_time);

@@ -45,5 +45,8 @@ int sql_parse(const char *st, ParsedSqlResult *sql_result);
 RC parse(const char *st, ParsedSqlResult *sql_result)
 {
   sql_parse(st, sql_result);
+  std::cout << "sql_parse success" << std::endl;
+  // 打印sql_result
+  std::cout << "sql_result: " << sql_result->to_string() << std::endl;
   return RC::SUCCESS;
 }
